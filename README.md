@@ -1,2 +1,4 @@
 # mbti
-과제
+
+## ERD
+![ERD](https://github.com/kdh92417/mbti/blob/main/backend/erd.png)
