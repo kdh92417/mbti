@@ -26,7 +26,15 @@ def read_pages(page_id: int):
         AnswerTable.id == page_id).first()
     questions = session.query(QuestionTable).filter(
         QuestionTable.id == page_id).first()
-    return answer, questions
+
+    results = {
+        "id": answer.id,
+        "answer": answer.answer,
+        "question_A": questions.question_A,
+        "question_B": questions.question_B
+    }
+
+    return results
 
 
 @app.get("/{type}")
